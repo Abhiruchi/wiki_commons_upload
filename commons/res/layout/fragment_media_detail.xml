@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:orientation="vertical"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:background="@android:color/background_dark"
+        >
+    <ProgressBar android:id="@+id/mediaDetailImageLoading"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:indeterminate="true"
+                 android:visibility="visible"
+                 />
+
+    <ImageView android:id="@+id/mediaDetailImageFailed"
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:layout_gravity="center"
+               android:src="@android:drawable/ic_menu_close_clear_cancel"
+               android:visibility="gone"
+               />
+
+    <ImageView android:id="@+id/mediaDetailImage"
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent"
+               android:scaleType="fitCenter"
+               android:visibility="gone"
+            />
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:background="#AA000000"
+            android:padding="8dp"
+            >
+
+        <EditText
+                android:id="@+id/mediaDetailTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="textNoSuggestions" android:textColor="#FFFFFF"/>
+       <!-- <TextView
+                android:id="@+id/mediaDetailDescription"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mediaDetailTitle"
+                android:layout_alignParentBottom="true"
+                style="?android:textAppearanceSmall"
+                android:textColor="#FFFFFFFF"
+                /> -->
+    </RelativeLayout>
+
+</FrameLayout>
